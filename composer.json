@@ -1,0 +1,7 @@
+{
+    "name" : "eeroniemi/cloudflare-errors-to-statsd-php",
+    "require": {
+        "php": ">=5.3.3",
+        "league/statsd": "1.3.*"
+    }
+}
