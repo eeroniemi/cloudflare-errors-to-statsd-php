@@ -6,11 +6,22 @@ How it works is that you include tiny transparent GIF to CloudFlare custom error
 
 When /public/index.php gets this request, it increases ```cloudflare.errors``` and ```cloudflare.errors.522``` counters and sends transparent GIF as response.
 
+## Requirements
+
+- Web server with PHP > 5.3.3
+- StatsD server where you can send stats (works out-of-the-box with Datadog, no other StatsD servers tested)
+
 ## Installation
 
-Clone this repository for example to dir ```/var/www/cloudflare-errors-to-statsd-php```
+Clone this repository:
 
-Run composer install to get StatsD library installed.
+```
+git clone https://github.com/eeroniemi/cloudflare-errors-to-statsd-php.git
+```
+
+And place it to your web server, for example to directory ```/var/www/cloudflare-errors-to-statsd-php```
+
+Run ```composer install``` to get StatsD library installed.
 
 Copy ```config.php.example``` to ```config.php``` and configure it to suit your needs. Default values should work most of the times.
 
